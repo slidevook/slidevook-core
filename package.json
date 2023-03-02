@@ -1,0 +1,20 @@
+{
+  "name": "@slidevook/slidevook-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slidevook/slidevook-core.git"
+  },
+  "keywords": ["slidev","WebContainer","slidevook"],
+  "author": "yukimura1227",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slidevook/slidevook-core/issues"
+  },
+  "homepage": "https://github.com/slidevook/slidevook-core#readme"
+}
