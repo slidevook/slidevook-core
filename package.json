@@ -27,6 +27,7 @@
     "primereact": "^9.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.14.4",
     "typescript": "^4.9.5"
   }
 }
