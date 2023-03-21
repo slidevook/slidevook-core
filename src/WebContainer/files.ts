@@ -3,6 +3,7 @@ import fs from 'fs';
 import { FileSystemTree } from "@webcontainer/api";
 const packageJson  = fs.readFileSync('./files/package.json?raw', 'utf-8');
 const viteConfigTs = fs.readFileSync('./files/vite.config.ts.txt?raw', 'utf-8');
+const indexHtml    = fs.readFileSync('./files/index.html?raw', 'utf-8');
 
 const stylesIndexTs             = fs.readFileSync('./files/styles/index.ts?raw', 'utf-8');
 const stylesSlidevookDefaultCss = fs.readFileSync('./files/styles/slidevookDefault.css?raw', 'utf-8');
@@ -126,6 +127,11 @@ export const files:FileSystemTree = {
   'vite.config.ts': {
     file: {
       contents: viteConfigTs
+    },
+  },
+  'index.html': {
+    file: {
+      contents: indexHtml
     },
   },
   pages: {
