@@ -10,6 +10,7 @@ const slidesMarkdown          = fs.readFileSync('./files/slides.md?raw', 'utf-8'
 const multipleEntriesMarkdown = fs.readFileSync('./files/pages/multiple-entries.md?raw', 'utf-8');
 const titleAndConfigMarkdown  = fs.readFileSync('./files/pages/title-and-config.md?raw', 'utf-8');
 
+const CoverLeftVue      = fs.readFileSync('./files/layouts/CoverLeft.vue.txt?raw', 'utf-8');
 const CoverRightVue     = fs.readFileSync('./files/layouts/CoverRight.vue.txt?raw', 'utf-8');
 const CenterImageVue    = fs.readFileSync('./files/layouts/CenterImage.vue.txt?raw', 'utf-8');
 const LeftRightImageVue = fs.readFileSync('./files/layouts/LeftRightImage.vue.txt?raw', 'utf-8');
@@ -20,6 +21,11 @@ const TopBottomImageVue = fs.readFileSync('./files/layouts/TopBottomImage.vue.tx
 export const files:FileSystemTree = {
   layouts: {
     directory: {
+      'CoverLeft.vue': {
+        file: {
+          contents: CoverLeftVue
+        }
+      },
       'CoverRight.vue': {
         file: {
           contents: CoverRightVue
