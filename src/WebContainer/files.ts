@@ -10,7 +10,18 @@ const slidesMarkdown          = fs.readFileSync('./files/slides.md?raw', 'utf-8'
 const multipleEntriesMarkdown = fs.readFileSync('./files/pages/multiple-entries.md?raw', 'utf-8');
 const titleAndConfigMarkdown  = fs.readFileSync('./files/pages/title-and-config.md?raw', 'utf-8');
 
+const LeftRightImageVue = fs.readFileSync('./files/layouts/LeftRightImage.vue.txt?raw', 'utf-8');
+
 export const files:FileSystemTree = {
+  layouts: {
+    directory: {
+      'LeftRightImage.vue': {
+        file: {
+          contents: LeftRightImageVue
+        }
+      },
+    }
+  },
   'package.json': {
     file: {
       contents: packageJson
