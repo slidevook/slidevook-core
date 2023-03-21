@@ -1,0 +1,22 @@
+<template>
+  <div class="slidev-layout">
+    <slot />
+    <div class="h-11/12 w-full grid grid-cols-1 grid-rows-2 gap-y-0.5 place-items-center">
+      <img :src="topImage" class="rounded-md max-h-full" />
+      <img :src="bottomImage" class="rounded-md max-h-full" />
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import { defineProps } from "vue";
+const props = defineProps({
+  topImage: {
+    type: String,
+    required: true,
+  },
+  bottomImage: {
+    type: String,
+    required: true,
+  }
+});
+</script>
