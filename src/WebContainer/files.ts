@@ -18,6 +18,7 @@ const RightImageVue     = fs.readFileSync('./files/layouts/RightImage.vue.txt?ra
 const LeftImageVue      = fs.readFileSync('./files/layouts/LeftImage.vue.txt?raw', 'utf-8');
 const TopBottomImageVue = fs.readFileSync('./files/layouts/TopBottomImage.vue.txt?raw', 'utf-8');
 const Column2Vue        = fs.readFileSync('./files/layouts/Column2.vue.txt?raw', 'utf-8');
+const Column2CenterVue  = fs.readFileSync('./files/layouts/Column2Center.vue.txt?raw', 'utf-8');
 const Column3Vue        = fs.readFileSync('./files/layouts/Column3.vue.txt?raw', 'utf-8');
 const Column3CenterVue  = fs.readFileSync('./files/layouts/Column3Center.vue.txt?raw', 'utf-8');
 
@@ -62,6 +63,11 @@ export const files:FileSystemTree = {
       'Column2.vue': {
         file: {
           contents: Column2Vue
+        }
+      },
+      'Column2Center.vue': {
+        file: {
+          contents: Column2CenterVue
         }
       },
       'Column3.vue': {
