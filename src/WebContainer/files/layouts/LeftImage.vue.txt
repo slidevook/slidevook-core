@@ -1,0 +1,21 @@
+<template>
+  <div class="h-full w-full grid grid-rows-1 grid-cols-2 place-items-center">
+    <div class="h-full flex place-items-center ml-2">
+      <img :src="image" class="max-h-full rounded-lg" />
+    </div>
+    <div class="w-full">
+      <div class="slidev-layout">
+        <slot />
+      </div>
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import { defineProps } from "vue";
+const props = defineProps({
+  image: {
+    type: String,
+    required: true,
+  }
+});
+</script>
