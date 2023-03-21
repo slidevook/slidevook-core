@@ -18,6 +18,7 @@ const RightImageVue     = fs.readFileSync('./files/layouts/RightImage.vue.txt?ra
 const LeftImageVue      = fs.readFileSync('./files/layouts/LeftImage.vue.txt?raw', 'utf-8');
 const TopBottomImageVue = fs.readFileSync('./files/layouts/TopBottomImage.vue.txt?raw', 'utf-8');
 const Column3Vue        = fs.readFileSync('./files/layouts/Column3.vue.txt?raw', 'utf-8');
+const Column3CenterVue  = fs.readFileSync('./files/layouts/Column3Center.vue.txt?raw', 'utf-8');
 
 export const files:FileSystemTree = {
   layouts: {
@@ -60,6 +61,11 @@ export const files:FileSystemTree = {
       'Column3.vue': {
         file: {
           contents: Column3Vue
+        }
+      },
+      'Column3Center.vue': {
+        file: {
+          contents: Column3CenterVue
         }
       },
     }
