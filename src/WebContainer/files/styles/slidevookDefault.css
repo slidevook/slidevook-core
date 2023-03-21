@@ -1,0 +1,30 @@
+.slidev-layout > h1 {
+  background-color: #3d1ca1;
+  background: linear-gradient(165deg, #658af8 0%, #3d1ca1 50%);
+  background-size: 100%;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  width: fit-content;
+}
+
+.slidev-layout h2 {
+  color: #4a40be;
+  margin-bottom: .75rem;
+}
+
+.slidev-layout h3 {
+  color: #5765db;
+  margin-bottom: .5rem;
+}
+.slidev-layout b {
+  background: linear-gradient(transparent 70%, #f8d365 100%);
+  font-weight: normal;
+}
+
+.slidev-layout strong {
+  background: linear-gradient(transparent 70%, #f8d365 100%);
+  font-weight: normal;
+}
