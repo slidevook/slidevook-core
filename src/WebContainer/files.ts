@@ -12,6 +12,7 @@ const titleAndConfigMarkdown  = fs.readFileSync('./files/pages/title-and-config.
 
 const CenterImageVue    = fs.readFileSync('./files/layouts/CenterImage.vue.txt?raw', 'utf-8');
 const LeftRightImageVue = fs.readFileSync('./files/layouts/LeftRightImage.vue.txt?raw', 'utf-8');
+const RightImageVue     = fs.readFileSync('./files/layouts/RightImage.vue.txt?raw', 'utf-8');
 
 export const files:FileSystemTree = {
   layouts: {
@@ -24,6 +25,11 @@ export const files:FileSystemTree = {
       'LeftRightImage.vue': {
         file: {
           contents: LeftRightImageVue
+        }
+      },
+      'RightImage.vue': {
+        file: {
+          contents: RightImageVue
         }
       },
     }
