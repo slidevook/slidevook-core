@@ -1,19 +1,11 @@
 ---
 background: https://images.unsplash.com/photo-1537534957881-887ee4c8c0b0
 class: 'text-center'
-highlighter: shiki
-lineNumbers: true
 info: |
   ## Slidevook Default Template
   service to share slide like a library book
   powered by [Sli.dev](https://sli.dev)
   powered by [WebContainer](https://webcontainers.io)
-# fonts:
-#   sand: 'Roboto'
-#   serif: 'Roboto Slab'
-#   mono:  'Roboto Mono'
-drawings:
-  persist: false
 layout: cover
 ---
 
@@ -28,6 +20,6 @@ powered by [Sli.dev](https://sli.dev)
   </span>
 </div>
 
-<div class="abs-br m-6 flex gap-2">
+<div class="absolute bottom-0 left-0 p-2">
   <img src='https://slidevook-public.s3.ap-northeast-1.amazonaws.com/slidevook-title.png' style="height: 2rem;"/>
 </div>

@@ -8,9 +8,9 @@ const indexHtml    = fs.readFileSync('./files/index.html?raw', 'utf-8');
 const stylesIndexTs             = fs.readFileSync('./files/styles/index.ts?raw', 'utf-8');
 const stylesSlidevookDefaultCss = fs.readFileSync('./files/styles/slidevookDefault.css?raw', 'utf-8');
 
-const slidesMarkdown          = fs.readFileSync('./files/slides.md?raw', 'utf-8');
-const multipleEntriesMarkdown = fs.readFileSync('./files/pages/multiple-entries.md?raw', 'utf-8');
-const titleAndConfigMarkdown  = fs.readFileSync('./files/pages/title-and-config.md?raw', 'utf-8');
+const slidesMarkdown     = fs.readFileSync('./files/slides.md?raw', 'utf-8');
+const titleMd            = fs.readFileSync('./files/pages/title.md?raw', 'utf-8');
+const slidevookSamplesMd = fs.readFileSync('./files/pages/slidevookSamples.md?raw', 'utf-8');
 
 const globalTopVue    = fs.readFileSync('./files/global-top.vue?raw', 'utf-8');
 const globalBottomVue = fs.readFileSync('./files/global-bottom.vue?raw', 'utf-8');
@@ -104,11 +104,6 @@ export const files:FileSystemTree = {
       contents: packageJson
     },
   },
-  'slides.md': {
-    file: {
-      contents: slidesMarkdown
-    },
-  },
   public: {
     directory: {
     }
@@ -147,16 +142,21 @@ export const files:FileSystemTree = {
       contents: globalBottomVue
     }
   },
+  'slides.md': {
+    file: {
+      contents: slidesMarkdown
+    },
+  },
   pages: {
     directory: {
-      'multiple-entries.md': {
+      'slidevookSamples.md': {
         file: {
-          contents: multipleEntriesMarkdown
+          contents: slidevookSamplesMd
         },
       },
-      'title-and-config.md': {
+      'title.md': {
         file: {
-          contents: titleAndConfigMarkdown
+          contents: titleMd
         }
       }
     }
