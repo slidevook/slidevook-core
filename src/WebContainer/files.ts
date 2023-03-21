@@ -12,6 +12,9 @@ const slidesMarkdown          = fs.readFileSync('./files/slides.md?raw', 'utf-8'
 const multipleEntriesMarkdown = fs.readFileSync('./files/pages/multiple-entries.md?raw', 'utf-8');
 const titleAndConfigMarkdown  = fs.readFileSync('./files/pages/title-and-config.md?raw', 'utf-8');
 
+const globalTopVue    = fs.readFileSync('./files/global-top.vue?raw', 'utf-8');
+const globalBottomVue = fs.readFileSync('./files/global-bottom.vue?raw', 'utf-8');
+
 const CoverLeftVue      = fs.readFileSync('./files/layouts/CoverLeft.vue.txt?raw', 'utf-8');
 const CoverRightVue     = fs.readFileSync('./files/layouts/CoverRight.vue.txt?raw', 'utf-8');
 const CenterImageVue    = fs.readFileSync('./files/layouts/CenterImage.vue.txt?raw', 'utf-8');
@@ -133,6 +136,16 @@ export const files:FileSystemTree = {
     file: {
       contents: indexHtml
     },
+  },
+  'global-top.vue': {
+    file: {
+      contents: globalTopVue
+    }
+  },
+  'global-bottom.vue': {
+    file: {
+      contents: globalBottomVue
+    }
   },
   pages: {
     directory: {
