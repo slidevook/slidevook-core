@@ -22,6 +22,7 @@ const Column2CenterVue  = fs.readFileSync('./files/layouts/Column2Center.vue.txt
 const Column3Vue        = fs.readFileSync('./files/layouts/Column3.vue.txt?raw', 'utf-8');
 const Column3CenterVue  = fs.readFileSync('./files/layouts/Column3Center.vue.txt?raw', 'utf-8');
 const Square4Vue        = fs.readFileSync('./files/layouts/Square4.vue.txt?raw', 'utf-8');
+const Square4CenterVue  = fs.readFileSync('./files/layouts/Square4Center.vue.txt?raw', 'utf-8');
 
 export const files:FileSystemTree = {
   layouts: {
@@ -84,6 +85,11 @@ export const files:FileSystemTree = {
       'Square4.vue': {
         file: {
           contents: Square4Vue
+        }
+      },
+      'Square4Center.vue': {
+        file: {
+          contents: Square4CenterVue
         }
       },
     }
