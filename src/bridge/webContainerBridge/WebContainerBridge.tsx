@@ -92,45 +92,54 @@ type TreeNodeIF = TreeNode & {
   path: string
 }
 
+
 export const buildTree = async (webContainerInstance:WebContainer, rootDir: string) => {
-  const rootNode:TreeNodeIF = {
-    path: rootDir,
-    key: rootDir,
-    label: rootDir,
-    icon: 'pi pi-fw pi-folder',
-    expanded: undefined,
-    children: [],
-    id: `${rootDir}-${new Date().getTime()}`,
-  };
-  return buildSubTree(webContainerInstance, rootNode);
+  const nodes:TreeNodeIF[] = [];
+
+  const dirEntries = await webContainerInstance.fs.readdir(rootDir, {'encoding': 'utf8', 'withFileTypes': true})
+  for (const dirEntry of dirEntries) {
+    if(dirEntry.name.match(/node_modules|pnpm-lock.y[a]ml|package.json|package-lock.json/)) continue;
+    if( true ) { // NOTE: implements condition when implementing advanced mode
+      if(dirEntry.name.match(/components|layouts|setup|styles|vite.config.ts|index.html|\.vue/)) continue;
+    }
+
+    const node = createTreeNode(rootDir, dirEntry);
+    if( dirEntry.isDirectory() ) await buildSubTree(webContainerInstance, node);
+    nodes.push(node);
+  }
+  return nodes;
 }
 
 const buildSubTree = async (webContainerInstance:WebContainer, parentNode:TreeNodeIF) => {
-  console.log(parentNode.path);
+  console.debug(parentNode.path);
   const children = await webContainerInstance.fs.readdir(parentNode.path, {'encoding': 'utf8', 'withFileTypes': true})
   console.debug(children);
   for (const child of children) {
-    if(child.name.match(/node_modules|pnpm-lock.y[a]ml|package.json|package-lock.json/)) continue;
-
     const parentNodePath = parentNode.path.endsWith('/') ? parentNode.path : `${parentNode.path}/`
 
     const childPath = `${parentNodePath}${child.name}`;
-    console.log(childPath);
-    const childNode:TreeNodeIF = {
-       path: childPath,
-       key: childPath,
-       label: child.name,
-       icon: detectIconClass(child),
-       expanded: undefined,
-       children: [],
-       id: `${childPath}-${new Date().getTime()}`,
-    };
+    console.debug(childPath);
+    const childNode:TreeNodeIF = createTreeNode(parentNodePath, child);
     if(parentNode.children) parentNode.children.push(childNode);
     if( child.isDirectory() ) {
       buildSubTree(webContainerInstance, childNode);
     }
   }
   return parentNode;
+}
+
+const createTreeNode = (parentPath:string, dirEntry:DirEnt<string>) => {
+  const path = `${parentPath}${dirEntry.name}`;
+  const node:TreeNodeIF = {
+    path: path,
+    key: path,
+    label: dirEntry.name,
+    icon: detectIconClass(dirEntry),
+    expanded: undefined,
+    children: [],
+    id: `${path}-${new Date().getTime()}`,
+  };
+  return node;
 }
 
 const detectIconClass = (dirent:DirEnt<String>) => {

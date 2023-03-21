@@ -1,0 +1,26 @@
+<template>
+  <div class="slidev-layout">
+    <slot />
+    <div class="h-11/12 w-full grid grid-rows-1 grid-cols-2 place-items-center gap-x-2">
+      <div class="h-full flex place-items-center">
+        <img :src="leftImage" class="max-h-full rounded-lg" />
+      </div>
+      <div class="h-full flex place-items-center">
+        <img :src="rightImage" class="max-h-full rounded-lg" />
+      </div>
+    </div>
+  </div>
+</template>
+<script setup lang="ts">
+import { defineProps } from "vue";
+const props = defineProps({
+  leftImage: {
+    type: String,
+    required: true,
+  },
+  rightImage: {
+    type: String,
+    required: true,
+  }
+});
+</script>

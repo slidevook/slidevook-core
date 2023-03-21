@@ -1,0 +1,26 @@
+<script setup lang="ts">
+import { defineProps } from "vue";
+const props = defineProps({
+});
+</script>
+<template>
+  <div class="slidev-layout">
+    <slot name="title"/>
+    <div class="grid grid-cols-12 gap-5 h-full">
+      <div class="col-span-6">
+        <div class="grid grid-rows-1 place-items-center h-full">
+          <div>
+            <slot name="left"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-6">
+        <div class="grid grid-rows-1 place-items-center h-full">
+          <div>
+            <slot name="right"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

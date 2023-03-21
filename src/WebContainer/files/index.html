@@ -1,0 +1,17 @@
+<head>
+  <title>Slidevook powered by Slidev</title>
+</head>
+<body>
+  <script>
+    var linkElements = document.getElementsByTagName('link');
+    for(var i = 0; i < linkElements.length; i++){
+      if(
+        linkElements[i].getAttribute('rel')
+        && linkElements[i].getAttribute('rel') === 'icon'
+      ) {
+        linkElements[i].setAttribute('href', "https://slidevook-public.s3.ap-northeast-1.amazonaws.com/slidevook-logo.svg");
+        break;
+      }
+    }
+  </script>
+</body>
