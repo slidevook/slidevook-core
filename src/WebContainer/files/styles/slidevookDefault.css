@@ -8,6 +8,7 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   width: fit-content;
+  line-height: 2.75rem;
 }
 
 .slidev-layout h2 {
