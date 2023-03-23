@@ -1,3 +1,6 @@
+.slidev-layout {
+  padding: 1.5rem 2.5rem;
+}
 .slidev-layout > h1 {
   background-color: #3d1ca1;
   background: linear-gradient(165deg, #658af8 0%, #3d1ca1 50%);
