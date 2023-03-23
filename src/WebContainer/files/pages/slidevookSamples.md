@@ -1,31 +1,4 @@
 ---
-layout: CenterImage
-image: https://source.unsplash.com/umLAzmGNZbU/1920x800
----
-
-# Layouts CenterImage.vue
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
----
-layout: LeftRightImage
-leftImage: https://source.unsplash.com/umLAzmGNZbU/960x960
-rightImage: https://source.unsplash.com/WNS__aBJjl4/960x960
----
-
-# Layouts LeftRightImage.vue
-
----
-layout: TopBottomImage
-topImage: https://source.unsplash.com/umLAzmGNZbU/1920x480
-bottomImage: https://source.unsplash.com/WNS__aBJjl4/1920x480
----
-
-# Layouts TopBottomImage.vue
-
----
 layout: RightImage
 image: https://source.unsplash.com/umLAzmGNZbU/960x960
 ---
@@ -33,7 +6,7 @@ image: https://source.unsplash.com/umLAzmGNZbU/960x960
 # Layouts
 ## RightImage.vue
 
-- 🎨 **Various Layouts** - various pre-installed layouts
+- 🎨 **Various PreInstalled Layouts**
 
 ```yaml
 ---
@@ -69,7 +42,7 @@ function updateUser(id: number, update: User) {
 }
 ```
 
-<arrow v-click="3" x1="400" y1="500" x2="260" y2="370" color="#4a40be" width="3" arrowSize="1" />
+<arrow v-click="3" x1="400" y1="500" x2="300" y2="370" color="#4a40be" width="3" arrowSize="1" />
 
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
@@ -99,6 +72,8 @@ image: https://source.unsplash.com/WNS__aBJjl4/960x960
 | <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
 | <kbd>up</kbd> | previous slide |
 | <kbd>down</kbd> | next slide |
+| <kbd>d</kbd> | toggle darkmode |
+| <kbd>o</kbd> | toggle slides overview |
 
 ---
 layout: CoverLeft
@@ -117,6 +92,14 @@ sequenceDiagram
 ```
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
+
+---
+layout: CenterImage
+image: https://slidevook-public.s3.ap-northeast-1.amazonaws.com/slidevook-paste-image-easily.gif
+---
+
+# Layouts CenterImage.vue
+you can paste image easily from clipboard
 
 ---
 layout: Column2
@@ -279,6 +262,26 @@ layout: Square4Center
 ## BottomRight Cloumn slot
 ### BottomRight Cloumn slot
 - BottomRight
+
+<!--
+The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
+
+---
+layout: LeftRightImage
+leftImage: https://source.unsplash.com/umLAzmGNZbU/960x960
+rightImage: https://source.unsplash.com/WNS__aBJjl4/960x960
+---
+
+# Layouts LeftRightImage.vue
+
+---
+layout: TopBottomImage
+topImage: https://source.unsplash.com/umLAzmGNZbU/1920x480
+bottomImage: https://source.unsplash.com/WNS__aBJjl4/1920x480
+---
+
+# Layouts TopBottomImage.vue
 
 ---
 layout: CoverRight
