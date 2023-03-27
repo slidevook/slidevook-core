@@ -4,7 +4,7 @@
     "slidev:remote": "slidev --remote",
     "slidev:build": "slidev build",
     "slidev:export": "slidev export",
-    "archive": "bestzip slide-spa.zip dist/*"
+    "archive": "bestzip slide-spa.zip slides/*"
   },
   "dependencies": {
     "@slidev/cli": "^0.40.3",
