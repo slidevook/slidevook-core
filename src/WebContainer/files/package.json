@@ -1,13 +1,14 @@
 {
+  "name": "slidevook-webcontainer",
   "scripts": {
     "slidev": "slidev",
     "slidev:remote": "slidev --remote",
     "slidev:build": "slidev build",
     "slidev:export": "slidev export",
-    "archive": "bestzip slide-spa.zip dist/*"
+    "archive": "bestzip slides.zip slides/*"
   },
   "dependencies": {
-    "@slidev/cli": "^0.40.3",
+    "@slidev/cli": "v0.49.3",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
     "playwright-chromium": "^1.31.0",

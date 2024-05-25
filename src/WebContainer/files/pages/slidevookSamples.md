@@ -284,6 +284,30 @@ bottomImage: https://source.unsplash.com/WNS__aBJjl4/1920x480
 # Layouts TopBottomImage.vue
 
 ---
+layout: RightImage2By1
+image: https://source.unsplash.com/umLAzmGNZbU/480x960
+---
+
+# Layouts RightImage2By1.vue
+
+```mermaid {scale: 1.5}
+---
+title: mermaid Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
+```
+
+---
 layout: CoverRight
 image: https://source.unsplash.com/umLAzmGNZbU/960x960
 ---
