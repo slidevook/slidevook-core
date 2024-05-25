@@ -1,35 +1,36 @@
-import fs from 'fs';
-
 import { FileSystemTree } from "@webcontainer/api";
-const packageJson  = fs.readFileSync('./files/package.json?raw', 'utf-8');
-const viteConfigTs = fs.readFileSync('./files/vite.config.ts.txt?raw', 'utf-8');
-const indexHtml    = fs.readFileSync('./files/index.html?raw', 'utf-8');
 
-const stylesIndexTs             = fs.readFileSync('./files/styles/index.ts?raw', 'utf-8');
-const stylesSlidevookDefaultCss = fs.readFileSync('./files/styles/slidevookDefault.css?raw', 'utf-8');
+import stylesIndexTs             from './files/styles/index.ts?raw';
+import stylesSlidevookDefaultCss from './files/styles/slidevookDefault.css?raw';
 
-const slidesMarkdown     = fs.readFileSync('./files/slides.md?raw', 'utf-8');
-const titleMd            = fs.readFileSync('./files/pages/title.md?raw', 'utf-8');
-const slidevookSamplesMd = fs.readFileSync('./files/pages/slidevookSamples.md?raw', 'utf-8');
+import slidesMarkdown     from './files/slides.md?raw';
+import titleMd            from './files/pages/title.md?raw';
+import slidevookSamplesMd from './files/pages/slidevookSamples.md?raw'
 
-const globalTopVue    = fs.readFileSync('./files/global-top.vue?raw', 'utf-8');
-const globalBottomVue = fs.readFileSync('./files/global-bottom.vue?raw', 'utf-8');
+import packageJson     from './files/package.json?raw';
+import packageLockJson from './files/package-lock.json?raw';
+import viteConfigTs    from './files/vite.config.ts?raw';
+import indexHtml       from './files/index.html?raw';
+import globalTopVue    from './files/global-top.vue?raw';
+import globalBottomVue from './files/global-bottom.vue?raw';
 
-const CoverLeftVue      = fs.readFileSync('./files/layouts/CoverLeft.vue.txt?raw', 'utf-8');
-const CoverRightVue     = fs.readFileSync('./files/layouts/CoverRight.vue.txt?raw', 'utf-8');
-const CenterImageVue    = fs.readFileSync('./files/layouts/CenterImage.vue.txt?raw', 'utf-8');
-const LeftRightImageVue = fs.readFileSync('./files/layouts/LeftRightImage.vue.txt?raw', 'utf-8');
-const RightImageVue     = fs.readFileSync('./files/layouts/RightImage.vue.txt?raw', 'utf-8');
-const LeftImageVue      = fs.readFileSync('./files/layouts/LeftImage.vue.txt?raw', 'utf-8');
-const TopBottomImageVue = fs.readFileSync('./files/layouts/TopBottomImage.vue.txt?raw', 'utf-8');
-const Column2Vue        = fs.readFileSync('./files/layouts/Column2.vue.txt?raw', 'utf-8');
-const Column2CenterVue  = fs.readFileSync('./files/layouts/Column2Center.vue.txt?raw', 'utf-8');
-const Column3Vue        = fs.readFileSync('./files/layouts/Column3.vue.txt?raw', 'utf-8');
-const Column3CenterVue  = fs.readFileSync('./files/layouts/Column3Center.vue.txt?raw', 'utf-8');
-const Square4Vue        = fs.readFileSync('./files/layouts/Square4.vue.txt?raw', 'utf-8');
-const Square4CenterVue  = fs.readFileSync('./files/layouts/Square4Center.vue.txt?raw', 'utf-8');
+import CoverLeftVue      from './files/layouts/CoverLeft.vue?raw';
+import CoverRightVue     from './files/layouts/CoverRight.vue?raw';
+import CenterImageVue    from './files/layouts/CenterImage.vue?raw';
+import LeftRightImageVue from './files/layouts/LeftRightImage.vue?raw';
+import RightImageVue     from './files/layouts/RightImage.vue?raw';
+import RightImage2By1    from './files/layouts/RightImage2By1.vue?raw';
+import LeftImageVue      from './files/layouts/LeftImage.vue?raw';
+import TopBottomImageVue from './files/layouts/TopBottomImage.vue?raw';
+import Column2Vue        from './files/layouts/Column2.vue?raw';
+import Column2VueCenter  from './files/layouts/Column2Center.vue?raw';
+import Column3Vue        from './files/layouts/Column3.vue?raw';
+import Column3VueCenter  from './files/layouts/Column3Center.vue?raw';
+import Square4Vue        from './files/layouts/Square4.vue?raw';
+import Square4VueCenter  from './files/layouts/Square4Center.vue?raw';
 
 export const files:FileSystemTree = {
+  components: { directory: {} },
   layouts: {
     directory: {
       'CoverLeft.vue': {
@@ -52,14 +53,19 @@ export const files:FileSystemTree = {
           contents: LeftRightImageVue
         }
       },
+      'LeftImage.vue': {
+        file: {
+          contents: LeftImageVue
+        }
+      },
       'RightImage.vue': {
         file: {
           contents: RightImageVue
         }
       },
-      'LeftImage.vue': {
+      'RightImage2By1.vue': {
         file: {
-          contents: LeftImageVue
+          contents: RightImage2By1
         }
       },
       'TopBottomImage.vue': {
@@ -74,7 +80,7 @@ export const files:FileSystemTree = {
       },
       'Column2Center.vue': {
         file: {
-          contents: Column2CenterVue
+          contents: Column2VueCenter
         }
       },
       'Column3.vue': {
@@ -84,7 +90,7 @@ export const files:FileSystemTree = {
       },
       'Column3Center.vue': {
         file: {
-          contents: Column3CenterVue
+          contents: Column3VueCenter
         }
       },
       'Square4.vue': {
@@ -94,20 +100,13 @@ export const files:FileSystemTree = {
       },
       'Square4Center.vue': {
         file: {
-          contents: Square4CenterVue
+          contents: Square4VueCenter
         }
       },
     }
   },
-  'package.json': {
-    file: {
-      contents: packageJson
-    },
-  },
-  public: {
-    directory: {
-    }
-  },
+  public: { directory: {} },
+  setup: { directory: {} },
   styles: {
     directory: {
       'index.ts': {
@@ -125,6 +124,16 @@ export const files:FileSystemTree = {
   'vite.config.ts': {
     file: {
       contents: viteConfigTs
+    },
+  },
+  'package.json': {
+    file: {
+      contents: packageJson
+    },
+  },
+  'package-lock.json': {
+    file: {
+      contents: packageLockJson
     },
   },
   'index.html': {

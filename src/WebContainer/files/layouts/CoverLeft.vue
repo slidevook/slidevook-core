@@ -8,23 +8,21 @@ const props = defineProps({
   },
 });
 
-const style = computed(
+const imagePath = computed(
   () => {
-    return {
-      backgroundImage: `url(${props.image})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-    }
+    const srcPath = `${props.image.startsWith('/') ? props.image.slice(1) : props.image}`;// NOTE: convert absolute path -> relative path for build to SPA
+    return srcPath;
   }
 );
 </script>
 
 <template>
   <div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+    <div class="w-full w-full">
+      <img class="object-cover w-full h-full" :src="imagePath" crossorigin="anonymous" />
+    </div>
     <div class="slidev-layout default">
       <slot />
     </div>
-    <div class="w-full w-full" :style="style" />
   </div>
 </template>
