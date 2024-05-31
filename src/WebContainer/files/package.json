@@ -8,7 +8,7 @@
     "archive": "bestzip slides.zip slides/*"
   },
   "dependencies": {
-    "@slidev/cli": "v0.49.4",
+    "@slidev/cli": "v0.49.5",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*",
     "playwright-chromium": "^1.31.0",
